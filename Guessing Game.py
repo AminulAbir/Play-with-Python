@@ -7,7 +7,7 @@ name = input("What is your name? ")
 print("Hi "+name+".")
 ask = input("Would you like to play a game? [y/n] ")
 if ask == 'n':
-    print("Get out from here")
+    print("Ok See you soon again!")
 if ask == 'y':
     print('''Game's Rules:
     1. 3 chances
@@ -15,7 +15,11 @@ if ask == 'y':
     print("I am guessing a number from 1 to 10")
     guess = int(input("What do you think the number is? "))
     while guess != number:
-        guess1 = input("Try again! [press 'h' for hints]")
+        print("Try again!", end=" ")
+        if hints == 1:
+            print("[press 'h' for hints]")
+            
+        guess1 = input()
         if guess1 != 'h':
             steps += 1
             if steps == 3:
